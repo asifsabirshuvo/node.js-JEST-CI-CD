@@ -1,0 +1,10 @@
+// sometimes hints dont work in vs code
+// npm install @types/jest
+//or keep this file; ITS OPTIONAL THO
+{
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
