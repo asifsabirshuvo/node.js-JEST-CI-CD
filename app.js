@@ -32,6 +32,7 @@ app.get('/', async(req, res) => {
     return res.json(info.data);
 });
 
+//just a pingpong route
 app.get('/ping', async(req, res) => {
     return res.json({
         data: 'pong'
