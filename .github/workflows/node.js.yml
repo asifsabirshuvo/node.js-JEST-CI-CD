@@ -43,7 +43,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd ~/testingrepo
-          git pull origin develop
-          npm install --production
-          pm2 restart node-app
+          ls
