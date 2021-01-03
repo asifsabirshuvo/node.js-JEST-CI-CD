@@ -32,6 +32,12 @@ app.get('/', async(req, res) => {
     return res.json(info.data);
 });
 
+app.get('/ping', async(req, res) => {
+    return res.json({
+        data: 'pong'
+    });
+});
+
 
 app.listen(3000, () => {
     console.log('server running on PORT: 3000');
