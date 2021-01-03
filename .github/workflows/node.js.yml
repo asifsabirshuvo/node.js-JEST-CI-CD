@@ -35,8 +35,8 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
-      uses: appleboy/ssh-action@develop
-      
+      uses: appleboy/ssh-action@master
+            
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
@@ -44,6 +44,6 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/testingrepo
-          git pull origin master
+          git pull origin develop
           npm install --production
           pm2 restart node-app
