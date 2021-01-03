@@ -26,7 +26,7 @@ test('testing get user', () => {
         firstName: 'asif',
         age: 33
     });
-    expect(typeof app.createUser().age).toBe('number');
+    expect(typeof app.createUser().age).toBe('string');
 
 });
 
