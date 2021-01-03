@@ -35,7 +35,7 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
-      uses: appleboy/ssh-action@develop
+      uses: appleboy/ssh-action@
       
       with:
         host: ${{ secrets.SSH_HOST }}
