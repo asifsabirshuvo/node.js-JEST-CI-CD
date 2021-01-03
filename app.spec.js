@@ -1,8 +1,17 @@
 let app = require('./app.js');
 
+afterAll(done => {
+    //JEST gives this error
+    //===> Jest did not exit one second after the test run has completed 
+    //if we dont shutdown the express server
+    app.shutdown();
+    done();
+});
+
 test('testing jsonplace holder axios data', async() => {
     // expect.assertions(1);
-    expect(await app.getData()).toEqual({
+    const data = await app.getData();
+    expect(data).toEqual({
         "userId": 1,
         "id": 1,
         "title": "delectus aut autem",

@@ -40,8 +40,15 @@ app.get('/ping', async(req, res) => {
 });
 
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
     console.log('server running on PORT: 3000');
 });
 
-module.exports = { createUser, getUsers, getData };
+
+
+function shutdown() {
+    server.close();
+}
+
+
+module.exports = { createUser, getUsers, getData, shutdown };
